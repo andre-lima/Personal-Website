@@ -29,7 +29,7 @@ p, h3 {
 
 header {
   background-color: #2196f3;
-  background-image: url("../images/pattern.png");
+  background-image: url("../images/pattern.png"), linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
   display: flex;
   justify-content: center;
   align-items: center;
