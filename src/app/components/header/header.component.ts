@@ -12,4 +12,8 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
+  // Trazer isso da config
+  name: string = 'Andre Dantas Lima';
+  position: string = 'Software Developer';
+
 }
