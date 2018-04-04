@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LogoComponent } from './logo.component';
+import { HeaderNavComponent } from './header-nav.component';
 
-describe('LogoComponent', () => {
-  let component: LogoComponent;
-  let fixture: ComponentFixture<LogoComponent>;
+describe('HeaderNavComponent', () => {
+  let component: HeaderNavComponent;
+  let fixture: ComponentFixture<HeaderNavComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LogoComponent ]
+      declarations: [ HeaderNavComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LogoComponent);
+    fixture = TestBed.createComponent(HeaderNavComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

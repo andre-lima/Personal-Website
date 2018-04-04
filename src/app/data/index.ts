@@ -1,11 +1,13 @@
 import { personalInformation } from './personal';
-// import { jobs } from './jobs';
-// import { skills } from './skills';
-// import { projects } from './projects';
+import { contact } from './contact';
+import { jobs } from './jobs';
+import { skills } from './skills';
+import { projects } from './projects';
 
 export const data = {
   personal: personalInformation,
-  // jobs,
-  // skills,
-  // projects
+  skills: skills,
+  projects: projects,
+  jobs: jobs,
+  contact: contact
 };
