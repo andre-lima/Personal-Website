@@ -15,7 +15,7 @@ export class HeaderNavComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.navLinks = Object.keys(this.dataService.getData()).filter(item => item !== 'personal');
+    this.navLinks = Object.keys(this.dataService.getData());
   }
 
 }

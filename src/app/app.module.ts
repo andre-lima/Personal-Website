@@ -9,6 +9,8 @@ import { HeaderNavComponent } from './components/header-nav/header-nav.component
 
 import { DataService } from './services/data/data.service';
 import { ScreenService } from './services/screen/screen.service';
+import { AboutMeComponent } from './components/about-me/about-me.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -16,7 +18,9 @@ import { ScreenService } from './services/screen/screen.service';
     AppComponent,
     HeaderComponent,
     LogoComponent,
-    HeaderNavComponent
+    HeaderNavComponent,
+    AboutMeComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule

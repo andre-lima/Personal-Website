@@ -22,8 +22,8 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     this.data = this.dataService.getData();
 
-    this.name = this.data.personal.name;
-    this.position = this.data.personal.position;
+    this.name = this.data.about_me.name;
+    this.position = this.data.about_me.position;
 
     this.breakpoint = this.screenService.getCurrentBreakpoint();
   }

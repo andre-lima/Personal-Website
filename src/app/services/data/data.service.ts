@@ -10,7 +10,7 @@ export class DataService {
     this.data = data;
   }
 
-  getData(): string {
+  getData() {
     return this.data;
   }
 
