@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LogoComponent } from './components/logo/logo.component';
 
-import { DataService } from './services/data.service';
+import { DataService } from './services/data/data.service';
+import { ScreenService } from './services/screen/screen.service';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { DataService } from './services/data.service';
     BrowserModule
   ],
   providers: [
-    DataService
+    DataService,
+    ScreenService
   ],
   bootstrap: [AppComponent]
 })
