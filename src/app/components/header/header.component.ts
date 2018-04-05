@@ -20,10 +20,11 @@ export class HeaderComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.data = this.dataService.getData();
-
-    this.name = this.data.about_me.name;
-    this.position = this.data.about_me.position;
+    this.dataService.getData('about_me')
+    .subscribe(data => {
+      this.name = data.name;
+      this.position = data.position;
+    });
 
     this.breakpoint = this.screenService.getCurrentBreakpoint();
   }

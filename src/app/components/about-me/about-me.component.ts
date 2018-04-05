@@ -12,16 +12,13 @@ export class AboutMeComponent implements OnInit {
   private title: string;
   private description: string;
 
-  constructor(
-    private dataService: DataService,
-  ) { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
-    const data = this.dataService.getData();
-
-    this.photoSrc = `../../../assets/images/${data.about_me.photo}`;
-    this.title = data.about_me.title;
-    this.description = data.about_me.description;
+    this.dataService.getData('about_me')
+    .subscribe(data => {
+      this.photoSrc = `../../../assets/images/${data.photo}`;
+    });
   }
 
 }

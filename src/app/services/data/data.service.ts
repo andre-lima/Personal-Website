@@ -1,17 +1,19 @@
 import { Injectable } from '@angular/core';
-import { data } from '../../data';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
+import { AboutMe, Contact, Skills, Jobs, Projects } from './data.interfaces';
 
 @Injectable()
 export class DataService {
 
-  private data = null;
+  private dataUrl = 'assets/data/content/';
 
-  constructor() {
-    this.data = data;
+  constructor(private http: HttpClient) {
   }
 
-  getData() {
-    return this.data;
+  getData(key: string) {
+    const url = this.dataUrl + key + '.json';
+    return this.http.get<AboutMe & Contact & Skills & Jobs & Projects>(url);
   }
 
 }

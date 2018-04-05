@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../../services/data/data.service';
+import { Config } from '../../config/config';
 
 @Component({
   selector: 'app-header-nav',
@@ -8,14 +8,15 @@ import { DataService } from '../../services/data/data.service';
 })
 export class HeaderNavComponent implements OnInit {
 
-  private navLinks = [];
+  private navLinks: string[] = [];
+  private config = null;
 
-  constructor(
-    private dataService: DataService
-  ) { }
+  constructor() {
+    this.config = Config;
+  }
 
   ngOnInit() {
-    this.navLinks = Object.keys(this.dataService.getData());
+    this.navLinks = this.config.pages;
   }
 
 }
