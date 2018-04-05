@@ -11,6 +11,7 @@ import { DataService } from './services/data/data.service';
 import { ScreenService } from './services/screen/screen.service';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ContentComponent } from './components/content/content.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { FooterComponent } from './components/footer/footer.component';
     LogoComponent,
     HeaderNavComponent,
     AboutMeComponent,
-    FooterComponent
+    FooterComponent,
+    ContentComponent
   ],
   imports: [
     BrowserModule
