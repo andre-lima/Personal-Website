@@ -1,7 +1,7 @@
 <div class="hero-foot">
   <nav class="header-nav tabs is-boxed" role="navigation" aria-label="main navigation">
     <ul>
-      <li [class]="currentActive === link ? 'is-active' : '' " (click)="setActive($event)" *ngFor="let link of navLinks">
+      <li [ngClass]="currentActive === link ? 'is-active' : '' " (click)="setActive($event)" *ngFor="let link of navLinks">
         <a [attr.data-link]="link" class="header-nav__link is-uppercase" >{{ link }}</a>
       </li>
     </ul>
