@@ -1,5 +1,18 @@
-<div class="about-me">
-  <img [src]="photoSrc" alt="photo" class="about-me__photo">
-  <h1 class="about-me__title">about_me</h1>
-  <p class="about-me__description">about_me_description</p>
+<div class="about-me tile is-ancestor">
+
+  <div class="is-parent">
+    <div class="tile">
+      <img [src]="photoSrc" alt="photo" class="about-me__photo">
+    </div>
+  </div>
+
+  <div class="tile is-parent is-vertical">
+    <div class="tile">
+      <h1 class="about-me__title title is-3">about_me</h1>
+    </div>
+    <div class="tile">
+      <p class="about-me__description">about_me_description</p>
+    </div>
+  </div>
+
 </div>

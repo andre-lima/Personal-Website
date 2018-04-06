@@ -2,8 +2,8 @@
   <nav class="tabs is-boxed is-fullwidth">
     <div class="container">
       <ul>
-        <li *ngFor="let link of navLinks">
-          <a class="header__link">{{ link }}</a>
+        <li [class]="currentActive === link ? 'is-active' : ''" (click)="setActive($event)" *ngFor="let link of navLinks">
+          <a [attr.data-link]="link" class="header__link" >{{ link }}</a>
         </li>
       </ul>
     </div>
