@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
-import { AboutMe, Contact, Skills, Jobs, Projects } from './data.interfaces';
+import { AboutMe, Contact, Skills, Experience, Projects } from './data.interfaces';
 
 @Injectable()
 export class DataService {
@@ -13,7 +13,7 @@ export class DataService {
 
   getData(key: string) {
     const url = this.dataUrl + key + '.json';
-    return this.http.get<AboutMe & Contact & Skills & Jobs & Projects>(url);
+    return this.http.get<AboutMe & Contact & Skills & Experience & Projects>(url);
   }
 
 }

@@ -16,6 +16,6 @@ export interface Skills {
 export interface Projects {
   a: any;
 }
-export interface Jobs {
+export interface Experience {
   a: any;
 }
