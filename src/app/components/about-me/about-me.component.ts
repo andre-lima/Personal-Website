@@ -17,7 +17,7 @@ export class AboutMeComponent implements OnInit {
   ngOnInit() {
     this.dataService.getData('about_me')
     .subscribe(data => {
-      this.photoSrc = `../../../assets/images/${data.photo}`;
+      this.photoSrc = `assets/images/${data.photo}`;
     });
   }
 
