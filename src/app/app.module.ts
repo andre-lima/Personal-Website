@@ -14,10 +14,12 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ExperienceComponent } from './components/experience/experience.component';
-import { EducationComponent } from './education/education.component';
+import { EducationComponent } from './components/education/education.component';
+import { LanguageMenuComponent } from './components/language-menu/language-menu.component';
 
 import { DataService } from './services/data/data.service';
 import { ScreenService } from './services/screen/screen.service';
+import { TranslationService } from './services/translation/translation.service';
 
 const appRoutes: Routes = [
   { path: 'about-me', component: AboutMeComponent },
@@ -44,19 +46,21 @@ const appRoutes: Routes = [
     ProjectsComponent,
     SkillsComponent,
     ExperienceComponent,
-    EducationComponent
+    EducationComponent,
+    LanguageMenuComponent
   ],
   imports: [
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
+      { enableTracing: false } // <-- debugging purposes only
     ),
     BrowserModule,
     HttpClientModule
   ],
   providers: [
     DataService,
-    ScreenService
+    ScreenService,
+    TranslationService
   ],
   bootstrap: [AppComponent]
 })
