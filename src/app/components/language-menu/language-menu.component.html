@@ -1,5 +1,15 @@
-<nav class="breadcrumb is-pulled-right">
-  <ul>
-    <li *ngFor="let lang of languages"><a href="#">{{ lang }}</a></li>
-  </ul>
-</nav>
+<div class="language-menu">
+  <nav class="breadcrumb is-right">
+    <ul>
+      <li
+        *ngFor="let lang of languages"
+        [ngClass]="activeLanguage === lang ? 'is-active' : '' ">
+        <a
+          [attr.data-lang]="lang"
+          (click)="setActive($event)">
+          {{ lang }}
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
