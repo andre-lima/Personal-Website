@@ -1,21 +1,41 @@
 import { Injectable } from '@angular/core';
+import { config } from '../../config/config';
 import { DataService } from '../../services/data/data.service';
+import { merge } from 'lodash';
 
 @Injectable()
 export class TranslationService {
 
-  private translations: Array<string> = [];
+  private translations = {};
+  private supportedLanguages: Array<string> = [];
   private currentLanguage: string;
 
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService) {
+    this.supportedLanguages = config.supportedLanguages;
+    this.init();
+  }
 
-  // testTrans() {
-  //   let eng = this.dataService.getTranslations('eng');
-  //   console.log(eng);
-  //   eng.subscribe(data => {
-  //     console.log(data);
-  //   });
-  // }
+  init() {
+    // Fetching translation objects for each supported language
+    this.supportedLanguages.forEach(lang => {
+      this.dataService.getTranslations(lang)
+        .subscribe(
+          data => {
+            merge(this.translations, data);
+          },
+          error => {
+            console.log('Translation files not found for language: ', lang);
+          }
+        );
+    });
+
+    // TODO: Get this from cookies and/or browser language
+    this.setCurrentLanguage('en');
+  }
+
+  getSupportedLanguages() {
+    return this.supportedLanguages;
+  }
 
   getCurrentLanguage() {
     return this.currentLanguage;
@@ -23,6 +43,22 @@ export class TranslationService {
 
   setCurrentLanguage(lang: string) {
     this.currentLanguage = lang;
+  }
+
+  private translate(key: string): string {
+    // private perform translation
+    let translation = key + ' [missing translation]';
+
+    if (this.translations[this.currentLanguage] && this.translations[this.currentLanguage][key]) {
+        translation = this.translations[this.currentLanguage][key];
+    }
+
+    return translation;
+  }
+
+  public instant(key: string) {
+      // call translation
+      return this.translate(key);
   }
 
 }

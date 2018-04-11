@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { config } from '../../config/config';
+// import { config } from '../../config/config';
 import { TranslationService } from '../../services/translation/translation.service';
 
 @Component({
@@ -15,10 +15,8 @@ export class LanguageMenuComponent implements OnInit {
   constructor(private translationService: TranslationService) { }
 
   ngOnInit() {
-    this.languages = config.supportedLanguages;
-
-    // change this logic to use cookies and browser language
-    this.activeLanguage = this.languages[0];
+    this.languages = this.translationService.getSupportedLanguages();
+    this.activeLanguage = this.translationService.getCurrentLanguage();
   }
 
   setActive(event) {
