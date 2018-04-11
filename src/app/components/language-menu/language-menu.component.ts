@@ -26,7 +26,7 @@ export class LanguageMenuComponent implements OnInit {
 
     this.activeLanguage = chosenLanguage;
     this.translationService.setCurrentLanguage(chosenLanguage);
-    console.log(this.translationService.getCurrentLanguage())
+    console.log(this.translationService.getCurrentLanguage());
   }
 
 }

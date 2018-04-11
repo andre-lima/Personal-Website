@@ -1,10 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 @charset "utf-8";
-@import "../node_modules/bulma/bulma";
-
-//**** BULMA Customization
 
 // Overriding BULMA's variables
 $tablet: 768px;
-
 //****
+
+@import "../node_modules/bulma/bulma";
