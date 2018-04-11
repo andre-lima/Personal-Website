@@ -23,7 +23,6 @@ export class HeaderComponent implements OnInit {
     this.dataService.getData('about_me')
     .subscribe(data => {
       this.name = data.name;
-      this.position = data.position;
     });
 
     this.breakpoint = this.screenService.getCurrentBreakpoint();
