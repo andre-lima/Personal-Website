@@ -4,6 +4,11 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 
+import { DataService } from './services/data/data.service';
+import { ScreenService } from './services/screen/screen.service';
+import { TranslationService } from './services/translation/translation.service';
+import { TranslatePipe } from './pipes/translate/translate.pipe';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LogoComponent } from './components/logo/logo.component';
@@ -16,10 +21,6 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { EducationComponent } from './components/education/education.component';
 import { LanguageMenuComponent } from './components/language-menu/language-menu.component';
-
-import { DataService } from './services/data/data.service';
-import { ScreenService } from './services/screen/screen.service';
-import { TranslationService } from './services/translation/translation.service';
 
 const appRoutes: Routes = [
   { path: 'about-me', component: AboutMeComponent },
@@ -37,6 +38,7 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+    TranslatePipe,
     HeaderComponent,
     LogoComponent,
     HeaderNavComponent,
@@ -47,7 +49,7 @@ const appRoutes: Routes = [
     SkillsComponent,
     ExperienceComponent,
     EducationComponent,
-    LanguageMenuComponent
+    LanguageMenuComponent,
   ],
   imports: [
     RouterModule.forRoot(
