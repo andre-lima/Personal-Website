@@ -3,14 +3,13 @@
     <div class="container">
       <ul>
         <li
-          *ngFor="let link of navLinks"
-          [ngClass]="currentActiveSection === link ? 'is-active' : '' "
-          (click)="setActive($event)">
+          *ngFor="let page of navLinks"
+          [ngClass]="currentActiveSection === page ? 'is-active' : '' ">
           <a
-            [routerLink]="'/' + link"
-            [attr.data-link]="link"
-            class="header-nav__link is-uppercase" >
-            {{ link | translate }}
+            [routerLink]="'/' + page"
+            [attr.data-link]="page"
+            class="header-nav__page-link is-uppercase" >
+            {{ page | translate }}
           </a>
         </li>
       </ul>
