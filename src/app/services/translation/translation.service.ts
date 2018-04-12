@@ -30,7 +30,7 @@ export class TranslationService {
     });
 
     // TODO: Get this from cookies and/or browser language
-    this.setCurrentLanguage('eng');
+    this.setCurrentLanguage('en');
   }
 
   getSupportedLanguages() {

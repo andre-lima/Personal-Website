@@ -6,5 +6,5 @@ export const config = {
     'experience',
     'education'
   ],
-  supportedLanguages: ['eng', 'fra']
+  supportedLanguages: ['en', 'fr']
 };
