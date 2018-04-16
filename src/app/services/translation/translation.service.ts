@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { config } from '../../config/config';
 import { DataService } from '../../services/data/data.service';
-import { merge } from 'lodash';
+import { merge, includes } from 'lodash';
 
 @Injectable()
 export class TranslationService {
@@ -16,6 +16,9 @@ export class TranslationService {
   }
 
   init() {
+    const browserLanguage: string = navigator.language || navigator['browserLanguage'];
+    const browserLanguageCode: string = browserLanguage.split('-')[0]; // two-letter (ISO 639-1) codes
+
     // Fetching translation objects for each supported language
     this.supportedLanguages.forEach(lang => {
       this.dataService.getTranslations(lang)
@@ -30,7 +33,9 @@ export class TranslationService {
     });
 
     // TODO: Get this from cookies and/or browser language
-    this.setCurrentLanguage('en');
+    const initialLanguage = includes(this.supportedLanguages, browserLanguageCode) ? browserLanguageCode : this.supportedLanguages[0];
+
+    this.setCurrentLanguage(initialLanguage);
   }
 
   getSupportedLanguages() {
