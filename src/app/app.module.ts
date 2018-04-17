@@ -10,9 +10,9 @@ import { TranslationService } from './services/translation/translation.service';
 import { TranslatePipe } from './pipes/translate/translate.pipe';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
-import { LogoComponent } from './components/logo/logo.component';
-import { HeaderNavComponent } from './components/header-nav/header-nav.component';
+import { HeaderComponent } from './components/Header/header/header.component';
+import { LogoComponent } from './components/Header/logo/logo.component';
+import { HeaderNavComponent } from './components/Header/header-nav/header-nav.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ContentComponent } from './components/content/content.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
@@ -20,7 +20,8 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { EducationComponent } from './components/education/education.component';
-import { LanguageMenuComponent } from './components/language-menu/language-menu.component';
+import { LanguageMenuComponent } from './components/Header/language-menu/language-menu.component';
+import { BurgerNavComponent } from './components/Header/burger-nav/burger-nav.component';
 
 const appRoutes: Routes = [
   { path: 'about-me', component: AboutMeComponent },
@@ -50,6 +51,7 @@ const appRoutes: Routes = [
     ExperienceComponent,
     EducationComponent,
     LanguageMenuComponent,
+    BurgerNavComponent,
   ],
   imports: [
     RouterModule.forRoot(
