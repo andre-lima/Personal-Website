@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { config } from '../../../config/config';
-import { Router } from '@angular/router';
+import { NavigationService } from '../../../services/navigation/navigation.service';
 
 @Component({
   selector: 'app-header-nav',
@@ -12,17 +11,15 @@ export class HeaderNavComponent implements OnInit {
   private navLinks: string[];
   private currentActiveSection;
 
-  constructor(private router: Router) {
-  }
+  constructor(private navigation: NavigationService) { }
 
   ngOnInit() {
-    this.navLinks = config.pages;
+    this.navLinks = this.navigation.getNavLinks();
+    this.currentActiveSection = this.navigation.getCurrentActiveSection();
+  }
 
-    // Replaces active tab when route is changed
-    this.router.events
-    .subscribe((event: any) => {
-      this.currentActiveSection = (event.url && event.url !== '/') ? (event.url).substr(1) : config.pages[0];
-    });
+  changeSection() {
+    this.currentActiveSection = this.navigation.getCurrentActiveSection();
   }
 
 }

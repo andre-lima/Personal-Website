@@ -7,6 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DataService } from './services/data/data.service';
 import { ScreenService } from './services/screen/screen.service';
 import { TranslationService } from './services/translation/translation.service';
+import { NavigationService } from './services/navigation/navigation.service';
 import { TranslatePipe } from './pipes/translate/translate.pipe';
 
 import { AppComponent } from './app.component';
@@ -64,7 +65,8 @@ const appRoutes: Routes = [
   providers: [
     DataService,
     ScreenService,
-    TranslationService
+    TranslationService,
+    NavigationService
   ],
   bootstrap: [AppComponent]
 })

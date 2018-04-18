@@ -8,7 +8,8 @@
           <a
             [routerLink]="'/' + page"
             [attr.data-link]="page"
-            class="header-nav__page-link is-uppercase" >
+            class="header-nav__page-link is-uppercase"
+            (click)="changeSection()">
             {{ page | translate }}
           </a>
         </li>
