@@ -10,9 +10,9 @@ import { ScreenService } from '../../../services/screen/screen.service';
 export class HeaderComponent implements OnInit {
 
   private data;
-  private name = '';
-  private position = '';
-  private breakpoint = '';
+  private name: string;
+  private position: string;
+  private breakpoint: string;
 
   constructor(
     private dataService: DataService,

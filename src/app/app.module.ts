@@ -22,7 +22,6 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { EducationComponent } from './components/education/education.component';
 import { LanguageMenuComponent } from './components/Header/language-menu/language-menu.component';
-import { BurgerNavComponent } from './components/Header/burger-nav/burger-nav.component';
 
 const appRoutes: Routes = [
   { path: 'about-me', component: AboutMeComponent },
@@ -52,7 +51,6 @@ const appRoutes: Routes = [
     ExperienceComponent,
     EducationComponent,
     LanguageMenuComponent,
-    BurgerNavComponent,
   ],
   imports: [
     RouterModule.forRoot(

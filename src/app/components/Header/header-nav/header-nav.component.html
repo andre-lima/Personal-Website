@@ -1,5 +1,9 @@
 <div class="hero-foot">
-  <nav class="header-nav tabs is-boxed" role="navigation" aria-label="main navigation">
+  <nav
+    class="header-nav tabs is-boxed"
+    role="navigation"
+    aria-label="main navigation"
+    [ngClass]="{'is-small': breakpoint === 'phone_small'}">
     <div class="container">
       <ul>
         <li
