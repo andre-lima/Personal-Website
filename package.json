@@ -1,0 +1,23 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "www.andredantas.com",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andre-lima/Personal-Website.git"
+  },
+  "author": "",
+  "license": "Closed",
+  "bugs": {
+    "url": "https://github.com/andre-lima/Personal-Website/issues"
+  },
+  "homepage": "https://github.com/andre-lima/Personal-Website#readme",
+  "devDependencies": {
+    "cssnano": "^4.1.7",
+    "sass": "^1.15.2"
+  }
+}
