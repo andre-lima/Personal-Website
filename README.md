@@ -1,2 +1,2 @@
 # Personal Website
-www.andredantas.com
+www.andredantas.me
