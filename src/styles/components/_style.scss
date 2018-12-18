@@ -1,37 +1,25 @@
-main, body, html, h1, h2, h3, img, div, article, p, input, select, label, form, figure {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Montserrat", sans-serif; 
-  color: #111;
-}
-
-img, a {
-  display: block;
-  margin: auto; }
-
-body {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ebebeb' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E"), linear-gradient(to right, #3a7bd5, #00d2ff);
-  color: white;
-  font-size: 1em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  width: 100vw;
-}
-
 @mixin white-container {
   margin: 0.5em;
   padding: 1em;
   background-color: rgba(255,255,255,0.5);
 }
 
-.mainContent {
+@mixin flex($jc: null, $ai: null, $wrap: wrap, $direction: null, $child-grow: null) {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: $wrap;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-direction: $direction;
+
+  & > * {
+    flex-grow: $child-grow;
+  }
+
+}
+
+.mainContent {
+  @include flex;
   max-width: 900px;
-  font-family: "Merriweather", serif;
 }
 
 .imageContainer {
@@ -45,21 +33,28 @@ body {
 
 .titleContainer {
   @include white-container;
+  @include flex($jc: center, $direction: column);
   flex: 0 1 500px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+}
+
+.titleContainer-name {
+  font-size: 1.25em;
+}
+
+.titleContainer-subtitle {
+  font-size: 1.25 * 1.25em;
+  font-family: "Merriweather", serif;
 }
 
 .linksContainer {
   @include white-container;
   display: flex;
-
   flex-basis: 500px;
 }
 
 .descriptionContainer {
   @include white-container;
+  
   & > p + p {
     margin-top: 0.8em;
   }
@@ -68,12 +63,4 @@ body {
 .skillsContainer {
   @include white-container;
   flex-basis: 600px;
-}
-
-.titleContainer-name {
-  
-}
-
-.titleContainer-subtitle {
-  
 }
