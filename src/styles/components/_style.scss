@@ -21,48 +21,48 @@ body {
   width: 100vw;
 }
 
+@mixin white-container {
+  margin: 0.5em;
+  padding: 1em;
+  background-color: rgba(255,255,255,0.5);
+}
+
 .mainContent {
   display: flex;
   flex-wrap: wrap;
+  max-width: 900px;
+  font-family: "Merriweather", serif;
 }
 
 .imageContainer {
-  padding: 2em;
-  background-color: rgba(255,255,255,0.5);
-  margin: 0.5em;
-  flex-basis: 200px;
+  @include white-container;
+  flex-basis: 100px;
 }
 
 .imageContainer-image {
-}
-
-.nameAndLinks {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  // align-items: center;
-  & > div {
-    flex-basis: 100%;
-  }
+  width: 100px;
 }
 
 .titleContainer {
-  margin: 0.5em;
-  padding: 2em;
-  background-color: rgba(255,255,255,0.5);
-  flex: 1 1 500px;
+  @include white-container;
+  flex: 0 1 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .linksContainer {
-  margin: 0.5em;
-  padding: 2em;
-  background-color: rgba(255,255,255,0.5);
+  @include white-container;
   display: flex;
 
-  // flex-basis: 100%;
+  flex-basis: 500px;
+}
+
+.descriptionContainer {
+  @include white-container;
+  & > p + p {
+    margin-top: 0.8em;
+  }
 }
 
 .titleContainer-name {
