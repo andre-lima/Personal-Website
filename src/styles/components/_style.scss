@@ -65,6 +65,11 @@ body {
   }
 }
 
+.skillsContainer {
+  @include white-container;
+  flex-basis: 600px;
+}
+
 .titleContainer-name {
   
 }
