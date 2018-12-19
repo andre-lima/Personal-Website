@@ -18,8 +18,8 @@
 }
 
 .mainContent {
-  @include flex;
-  max-width: 900px;
+  @include flex($ai: flex-end);
+  max-width: 800px;
 }
 
 .imageContainer {
