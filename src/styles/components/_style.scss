@@ -1,7 +1,8 @@
 @mixin white-container {
   margin: 0.5em;
   padding: 1em;
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(255,255,255,0.7);
+  box-shadow: 0px 1px 5px rgba(0,0,0,0.1), 0px 1px 5px rgba(0,0,0,0.2);
 }
 
 @mixin flex($jc: null, $ai: null, $wrap: wrap, $direction: null, $child-grow: null) {
