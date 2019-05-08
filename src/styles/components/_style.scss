@@ -50,7 +50,11 @@
 .linksContainer {
   @include white-container;
   display: flex;
-  font-size: 0.8em;
+
+  a {
+    font-size: 0.8em;
+  }
+  
   a + a {
     margin-left: 2em;
   }
