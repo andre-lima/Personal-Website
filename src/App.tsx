@@ -1,6 +1,6 @@
 import React from "react";
-import { Header } from "./components/Header/Header";
-import { MainTitle } from "./components/MainTitle/MainTitle";
+import Header from "./components/Header/Header";
+import MainTitle from "./components/MainTitle/MainTitle";
 import "./App.scss";
 import ProjectItem from "./components/ProjectItem/ProjectItem";
 

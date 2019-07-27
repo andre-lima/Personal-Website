@@ -1,7 +1,7 @@
 import React from "react";
 import "./Header.scss";
 
-export const Header: React.FC = () => {
+const Header: React.FC = () => {
   return (
     <header className="header">
       <div className="myName">Andre Dantas</div>
@@ -15,3 +15,5 @@ export const Header: React.FC = () => {
     </header>
   );
 };
+
+export default Header;
