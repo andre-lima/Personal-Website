@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.navigation {
+}
+
+.links {
+  display: flex;
+
+  & > li {
+    margin-left: 1em;
+  }
+}

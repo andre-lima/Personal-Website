@@ -1,25 +1,39 @@
 {
   "name": "personal-website",
-  "version": "1.0.0",
-  "description": "www.andredantas.com",
-  "main": "index.html",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@types/jest": "24.0.15",
+    "@types/node": "12.6.8",
+    "@types/react": "16.8.23",
+    "@types/react-dom": "16.8.5",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "3.0.1",
+    "typescript": "3.5.3"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "parcel build src/index.html"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/andre-lima/Personal-Website.git"
+  "eslintConfig": {
+    "extends": "react-app"
   },
-  "author": "",
-  "license": "Closed",
-  "bugs": {
-    "url": "https://github.com/andre-lima/Personal-Website/issues"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
-  "homepage": "https://github.com/andre-lima/Personal-Website#readme",
   "devDependencies": {
-    "cssnano": "^4.1.7",
-    "parcel": "^1.10.3",
-    "sass": "^1.15.2"
+    "node-sass": "^4.12.0"
   }
 }
