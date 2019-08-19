@@ -12,32 +12,35 @@ $text-md: 1em;
 $text-lg: 1em * $text-scale-ratio;
 $text-xl: 1em * $text-scale-ratio * $text-scale-ratio;
 $text-xxl: 1em * $text-scale-ratio * $text-scale-ratio * $text-scale-ratio;
-$text-xxxl: 1em * $text-scale-ratio * $text-scale-ratio * $text-scale-ratio * $text-scale-ratio;
+$text-xxxl: 1em * $text-scale-ratio * $text-scale-ratio * $text-scale-ratio *
+  $text-scale-ratio;
 
 // Font sizes
+$text-mice: 1em / ($text-scale-ratio * $text-scale-ratio * $text-scale-ratio);
 $text-xs: 1em / ($text-scale-ratio * $text-scale-ratio);
 $text-sm: 1em / $text-scale-ratio;
 $text-md: 1em;
 $text-lg: 1em * $text-scale-ratio;
 $text-xl: 1em * $text-scale-ratio * $text-scale-ratio;
 $text-xxl: 1em * $text-scale-ratio * $text-scale-ratio * $text-scale-ratio;
-$text-xxxl: 1em * $text-scale-ratio * $text-scale-ratio * $text-scale-ratio * $text-scale-ratio;
-$text-huge: 1em * $text-scale-ratio * $text-scale-ratio * $text-scale-ratio * $text-scale-ratio * $text-scale-ratio;
+$text-xxxl: 1em * $text-scale-ratio * $text-scale-ratio * $text-scale-ratio *
+  $text-scale-ratio;
+$text-huge: 1em * $text-scale-ratio * $text-scale-ratio * $text-scale-ratio *
+  $text-scale-ratio * $text-scale-ratio;
 
 // If $text-scale-ratio is 1.25, these are the used values:
-// $text-xs : 0.512em 
-// $text-sm : 0.64em
-// $text-md : 0.8em
-// $text-lg : 1em
-// $text-xl : 1.25em
-// $text-xxl : 1.563em
-// $text-xxxl : 1.953em
-// $text-huge : 2.441em
+// $text-mice : 0.512em
+// $text-xs : 0.64em
+// $text-sm : 0.8em
+// $text-md : 1em
+// $text-lg : 1.25em
+// $text-xl : 1.563em
+// $text-xxl : 1.953em
+// $text-huge : 3.05em
 
 /* line-height */
 $heading-line-height: 1.2;
 $body-line-height: 1.4;
-
 
 html {
   font-size: $text-base-size-mobile;
@@ -46,7 +49,6 @@ html {
   @media screen and (min-width: map-get($breakpoints, phone)) {
     font-size: $text-base-size;
   }
-  
 }
 
 // html {
@@ -58,7 +60,11 @@ body {
   font-family: $font-primary;
 }
 
-h1, h2, h3, h4, form legend {
+h1,
+h2,
+h3,
+h4,
+form legend {
   line-height: $heading-line-height;
 }
 
@@ -67,23 +73,30 @@ h1, h2, h3, h4, form legend {
   font-size: $text-xxxl;
 }
 
-h1, .text--xxl {
+h1,
+.text--xxl {
   font-size: $text-xxl;
 }
 
-h2, .text--xl {
+h2,
+.text--xl {
   font-size: $text-xl;
 }
 
-h3, .text--lg {
+h3,
+.text--lg {
   font-size: $text-lg;
 }
 
-h4, p, button, .text--md {
+h4,
+p,
+button,
+.text--md {
   font-size: $text-md;
 }
 
-.text--sm, small {
+.text--sm,
+small {
   font-size: $text-sm;
 }
 

@@ -1,9 +1,7 @@
-@mixin basic-container($padding: $component-padding, $distance-from-sibling: $space-xs) {
+@mixin basic-container($padding: $content-padding) {
   padding: $padding;
-    
-  & > *:not(:last-child) {
-    @include push-next-down($distance-from-sibling);
-  }
+  max-width: $content-max-width;
+  margin: 0 auto;
 
   @content;
 }

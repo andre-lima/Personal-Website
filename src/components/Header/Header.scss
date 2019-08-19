@@ -1,16 +1,16 @@
+@import "../../index";
+
 .header {
-  display: flex;
-  justify-content: space-between;
-  padding: 1em;
+  @include flex(space-between);
 }
 
 .navigation {
 }
 
 .links {
-  display: flex;
+  @include flex();
 
   & > li {
-    margin-left: 1em;
+    margin-left: $space-xl;
   }
 }

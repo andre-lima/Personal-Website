@@ -1,7 +1,7 @@
-.skills {
-  padding: 1em;
-}
+@import "./index";
 
-.projects {
-  padding: 1em;
+main {
+  & > * {
+    @include basic-container();
+  }
 }
