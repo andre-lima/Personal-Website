@@ -2,17 +2,22 @@ doctype html
 html(lang='en')
   head
     title Andre Dantas | Frontend Developer
-    link(rel="stylesheet", href="./styles/main.scss")
+    link(rel="stylesheet", href="./css/main.css")
 
   body
-    include ./main/header.pug
+    include /header.pug
 
-    div.mainTitle
-      h1.mainTitle-text A Dedicated and Passionate Developer
+    main
+      div.banner
+        h1.banner-title A Dedicated and Passionate Developer
+        p.banner-text 
+          span I'm a Frontend developer from Montreal, Canada.
+        p.banner-text 
+          span Lover of new technologies, programming became to me the outlet to exploring visual and interactive experiences.
 
-    div.projectItem this.props.projectName
+      div.projectItem this.props.projectName
 
-    div.skillItem this.props.skillName
-    
-    a.goToBlog(href="/posts/testPost") go to blog
+      div.skillItem this.props.skillName
+      
+      a.goToBlog(href="/posts/testPost") go to blog
 

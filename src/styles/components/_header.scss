@@ -1,0 +1,22 @@
+.header {
+  padding: $space-xl;
+  @include flex(null, center);
+
+  &-title {
+    font-size: $text-xl;
+  }
+
+  &-navigation {
+    margin-left: auto;
+  }
+
+  &-links {
+    @include flex();
+
+  }
+  
+  &-link {
+    margin-left: $space-md;
+  }
+
+}
