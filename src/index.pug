@@ -7,10 +7,12 @@ html(lang='en')
   body
     include ./main/header.pug
 
-    h1 This is my site
-    div.description
-      p I'm a Frontend developer living in Montreal, Canada.
-      p Lover of new technologies, programming became to me the outlet to exploring visual and interactive experiences. Through this medium I feel highly motivated and eager to learn new skills every day.
+    div.mainTitle
+      h1.mainTitle-text A Dedicated and Passionate Developer
+
+    div.projectItem this.props.projectName
+
+    div.skillItem this.props.skillName
     
     a.goToBlog(href="/posts/testPost") go to blog
 
