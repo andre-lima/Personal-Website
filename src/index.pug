@@ -1,12 +1,16 @@
 doctype html
 html(lang='en')
   head
-    title Andre Dantas | Frontend Developer 
+    title Andre Dantas | Frontend Developer
+    link(rel="stylesheet", href="./styles/main.scss")
 
   body
+    include ./main/header.pug
+
     h1 This is my site
     div.description
       p I'm a Frontend developer living in Montreal, Canada.
       p Lover of new technologies, programming became to me the outlet to exploring visual and interactive experiences. Through this medium I feel highly motivated and eager to learn new skills every day.
+    
     a.goToBlog(href="/posts/testPost") go to blog
 
