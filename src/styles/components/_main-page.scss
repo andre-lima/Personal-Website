@@ -1,3 +1,12 @@
-main {
+body {
   @include flex($direction: column);
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+
+  & > *:not(:first-child) {
+    @include basic-container();
+  }
 }

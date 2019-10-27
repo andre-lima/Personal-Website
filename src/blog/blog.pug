@@ -2,12 +2,25 @@ doctype html
 html(lang='en')
   head
     title THE BLOG
+    link(rel="stylesheet", href="/assets/css/main.css")
 
   body
     include /partials/blogHeader.pug
 
     h1.bla This is my blog
 
-    a(href="/posts/testPost") see one post
+    a(href="/posts/post-1") see one post
+
+    br
 
     a(href="/") back to page
+
+    br
+
+    ul
+      each post, index in collections.post
+        if index < config.postListLimit
+          li
+            a(href="posts/" + post.data.slug)= post.data.title
+            div= post.data.date
+      

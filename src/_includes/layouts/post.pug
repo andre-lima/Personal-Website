@@ -2,11 +2,11 @@ doctype html
 html(lang='en')
   head
     title ONE POST
+    link(rel="stylesheet", href="/assets/css/main.css")
 
   body
     include /partials/blogHeader.pug
 
-    h1.bla PUG !{title}
     div.post !{content}
 
     a(href="/") back to page

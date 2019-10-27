@@ -1,28 +1,21 @@
+---
+layout: /layouts/home.pug
+---
+
 include /mixins/generic-section.pug
 
-doctype html
-html(lang='en')
-  head
-    title Andre Dantas | Frontend Developer
-    link(rel="stylesheet", href="./assets/css/main.css")
+div.banner
+  div.banner-container
+    h1.banner-title A Dedicated and Passionate Developer
+    p.banner-text 
+      span I'm a Frontend developer from Montreal, Canada.
+    p.banner-text 
+      span Lover of new technologies, programming became to me the outlet to exploring visual and interactive experiences.
 
-  body
-    include /partials/header.pug
+div.section-container
+  +generic-section(skills.title)
 
-    main
-      div.banner
-        div.banner-container
-          h1.banner-title A Dedicated and Passionate Developer
-          p.banner-text 
-            span I'm a Frontend developer from Montreal, Canada.
-          p.banner-text 
-            span Lover of new technologies, programming became to me the outlet to exploring visual and interactive experiences.
+div.section-container
+  +generic-section(projects.title)
 
-      div.section-container
-        +generic-section(skills.title)
-
-      div.section-container
-        +generic-section(projects.title)
-
-      a.goToBlog(href="/posts/testPost") go to blog
 
