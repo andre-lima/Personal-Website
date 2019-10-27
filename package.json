@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "scss:watch": "npm run scss:compile -- --watch",
     "prescss:watch": "npm run scss:compile",
-    "scss:compile": "node-sass ./src/styles/main.scss -o ./src/css --style=compressed"
+    "scss:compile": "node-sass ./src/styles/main.scss -o ./src/assets/css --style=compressed"
   },
   "keywords": [],
   "author": "",

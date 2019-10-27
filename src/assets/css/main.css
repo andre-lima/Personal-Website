@@ -1,0 +1,142 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+body,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal; }
+
+ol,
+ul {
+  list-style: none; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+/* components padding */
+/* distance between components */
+/* fixed values - not affected by $space-unit or $text-base-size */
+/* line-height */
+html {
+  font-size: 1em;
+  font-family: sans-serif; }
+  @media only screen and (min-width: 480px) {
+    html {
+      font-size: 1.25em; } }
+
+body {
+  font-size: inherit;
+  font-family: sans-serif; }
+
+h1,
+h2,
+h3,
+h4,
+form legend {
+  line-height: 1.2; }
+
+/* text size */
+.text--xxxl {
+  font-size: 2.44141em; }
+
+h1,
+.text--xxl {
+  font-size: 1.95312em; }
+
+h2,
+.text--xl {
+  font-size: 1.5625em; }
+
+h3,
+.text--lg {
+  font-size: 1.25em; }
+
+h4,
+p,
+button,
+.text--md {
+  font-size: 1em; }
+
+.text--sm,
+small {
+  font-size: 0.8em; }
+
+.text--xs {
+  font-size: 0.64em; }
+
+p {
+  line-height: 1.4; }
+
+.header {
+  padding: 1.25em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; }
+  .header-title {
+    font-size: 1.5625em; }
+  .header-navigation {
+    margin-left: auto; }
+  .header-links {
+    display: flex;
+    flex-wrap: wrap; }
+  .header-link {
+    margin-left: 1em; }
+
+.banner {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23252525' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E"); }
+
+.banner-container {
+  padding: 1.25em;
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto; }
+
+.banner-title {
+  display: inline-block;
+  background-color: #fff;
+  padding: 0.125em;
+  line-height: 1;
+  margin-bottom: 0.5em; }
+
+.banner-text:not(:last-child) {
+  margin-bottom: 0.5em; }
+
+.banner-text span {
+  text-align: right;
+  background-color: #000;
+  color: white;
+  padding: 0.125em;
+  line-height: 1; }
+  .banner-text span span {
+    box-decoration-break: clone; }
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column; }
+
+.section-container {
+  padding: 1.25em;
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto; }
+
+.sectionTitle {
+  font-size: 1.25em; }

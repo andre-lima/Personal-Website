@@ -1,5 +1,6 @@
 $space-unit: 1em;
 
+$space-xxxs: 0.125 * $space-unit;
 $space-xxs: 0.25 * $space-unit;
 $space-xs: 0.5 * $space-unit;
 $space-sm: 0.75 * $space-unit;
@@ -11,7 +12,7 @@ $space-xxxl: 5.25 * $space-unit;
 
 /* components padding */
 $content-padding: $space-lg;
-$content-max-width: none;
+$content-max-width: 1024px;
 
 /* distance between components */
 $components-bottom-spacing: $space-md;

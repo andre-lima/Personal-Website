@@ -1,5 +1,5 @@
 .header {
-  padding: $space-xl;
+  padding: $content-padding;
   @include flex(null, center);
 
   &-title {

@@ -1,0 +1,7 @@
+.section-container {
+  @include basic-container();
+}
+
+.sectionTitle {
+  font-size: $text-lg;
+}

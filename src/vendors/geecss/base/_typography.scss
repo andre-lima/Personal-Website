@@ -46,9 +46,11 @@ html {
   font-size: $text-base-size-mobile;
   font-family: $font-primary;
 
-  @media screen and (min-width: map-get($breakpoints, phone)) {
+  @include mq(phone) {
     font-size: $text-base-size;
+
   }
+
 }
 
 // html {

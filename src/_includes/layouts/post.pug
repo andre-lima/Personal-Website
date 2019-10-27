@@ -4,9 +4,9 @@ html(lang='en')
     title ONE POST
 
   body
-    include blogHeader.pug
+    include /partials/blogHeader.pug
 
-    h1.bla PUG
+    h1.bla PUG !{title}
     div.post !{content}
 
     a(href="/") back to page
