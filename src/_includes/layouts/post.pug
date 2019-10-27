@@ -1,12 +1,16 @@
 doctype html
+include /mixins/post-title.pug
+
 html(lang='en')
   head
-    title ONE POST
+    title= title
     link(rel="stylesheet", href="/assets/css/main.css")
 
   body
-    include /partials/blogHeader.pug
+    include /partials/blog-header.pug
 
-    div.post !{content}
+    main
+      +post-title(title, date)
+      div.postContent-container.container !{content}
 
-    a(href="/") back to page
+    include /partials/blog-footer.pug

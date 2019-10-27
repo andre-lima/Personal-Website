@@ -1,0 +1,28 @@
+.postTitle {
+  background-image: url("https://loremflickr.com/1024/300");
+  background-repeat: no-repeat;
+  background-size: cover;
+  // color: white;
+
+  &-container {
+    @include basic-container($space-xxl $space-lg);
+  }
+
+  &-text {
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: $space-xxxs-fixed;
+    display: inline-block;
+  }
+}
+
+.postDate {
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: $space-xxxs-fixed;
+  line-height: 1;
+  display: inline-block;
+  box-decoration-break: clone;
+}
+
+.postContent-container {
+  @include basic-container();
+}

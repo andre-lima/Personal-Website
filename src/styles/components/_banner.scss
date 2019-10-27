@@ -1,36 +1,29 @@
 .banner {
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23252525' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
-
-}
-
-.banner-container {
-  @include basic-container();
 }
 
 .banner-title {
   display: inline-block;
   background-color: #fff;
-  padding: $space-xxxs;
+  padding: $space-xxxs-fixed;
   line-height: 1;
   margin-bottom: $space-xs;
 }
 
 .banner-text {
   &:not(:last-child) {
-
-  margin-bottom: $space-xs;
+    margin-bottom: $space-xs;
   }
-
-span {
-
-  text-align: right;
-  background-color: #000;
-  color: white;
-  padding: $space-xxxs;
-  line-height: 1;
 
   span {
-    box-decoration-break: clone;
+    text-align: right;
+    background-color: #000;
+    color: white;
+    padding: $space-xxxs-fixed;
+    line-height: 1;
+
+    span {
+      box-decoration-break: clone;
+    }
   }
-}
 }

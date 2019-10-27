@@ -5,22 +5,18 @@ html(lang='en')
     link(rel="stylesheet", href="/assets/css/main.css")
 
   body
-    include /partials/blogHeader.pug
+    include /partials/blog-header.pug
 
-    h1.bla This is my blog
+    main
 
-    a(href="/posts/post-1") see one post
+      h1.bla.container This is my blog
 
-    br
+      ul.container
+        each post, index in collections.post
+          if index < config.postListLimit
+            li
+              a(href="posts/" + post.data.slug)= post.data.title
+              div= post.data.date
 
-    a(href="/") back to page
-
-    br
-
-    ul
-      each post, index in collections.post
-        if index < config.postListLimit
-          li
-            a(href="posts/" + post.data.slug)= post.data.title
-            div= post.data.date
+    include /partials/blog-footer.pug
       

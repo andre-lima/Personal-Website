@@ -19,6 +19,7 @@ $components-bottom-spacing: $space-md;
 
 /* fixed values - not affected by $space-unit or $text-base-size */
 $space-unit-fixed: 1rem;
+$space-xxxs-fixed: 0.125 * $space-unit-fixed;
 $space-xxs-fixed: 0.25 * $space-unit-fixed;
 $space-xs-fixed: 0.5 * $space-unit-fixed;
 $space-sm-fixed: 0.75 * $space-unit-fixed;

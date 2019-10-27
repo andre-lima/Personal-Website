@@ -84,6 +84,12 @@ small {
 p {
   line-height: 1.4; }
 
+.container {
+  padding: 1.25em;
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto; }
+
 .header {
   padding: 1.25em;
   display: flex;
@@ -102,16 +108,10 @@ p {
 .banner {
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23252525' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E"); }
 
-.banner-container {
-  padding: 1.25em;
-  max-width: 1024px;
-  width: 100%;
-  margin: 0 auto; }
-
 .banner-title {
   display: inline-block;
   background-color: #fff;
-  padding: 0.125em;
+  padding: 0.125rem;
   line-height: 1;
   margin-bottom: 0.5em; }
 
@@ -122,10 +122,13 @@ p {
   text-align: right;
   background-color: #000;
   color: white;
-  padding: 0.125em;
+  padding: 0.125rem;
   line-height: 1; }
   .banner-text span span {
     box-decoration-break: clone; }
+
+.sectionTitle {
+  font-size: 1.25em; }
 
 body {
   display: flex;
@@ -135,17 +138,33 @@ body {
 
 main {
   flex-grow: 1; }
-  main > *:not(:first-child) {
-    padding: 1.25em;
+
+.bla {
+  color: red; }
+
+.postTitle {
+  background-image: url("https://loremflickr.com/1024/300");
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .postTitle-container {
+    padding: 3.25em 1.25em;
     max-width: 1024px;
     width: 100%;
     margin: 0 auto; }
+  .postTitle-text {
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 0.125rem;
+    display: inline-block; }
 
-.section-container {
+.postDate {
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 0.125rem;
+  line-height: 1;
+  display: inline-block;
+  box-decoration-break: clone; }
+
+.postContent-container {
   padding: 1.25em;
   max-width: 1024px;
   width: 100%;
   margin: 0 auto; }
-
-.sectionTitle {
-  font-size: 1.25em; }
