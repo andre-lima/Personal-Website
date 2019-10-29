@@ -12,7 +12,7 @@ html(lang='en')
       div.banner
         div.banner-container.container
           h1.banner-title= config.blogTitle
-          p.banner-text 
+          p.banner-text
             span= config.blogTagline
 
       div.latestPosts.container
@@ -20,10 +20,8 @@ html(lang='en')
         ul.latestPosts-list
           each post, index in collections.post
             if index < config.postListLimit
-              li.latestPosts-item 
+              li.latestPosts-item
                 a(href="posts/" + post.data.slug).latestPosts-itemText= post.data.title
                 div.latestPosts-itemDate= post.data.date
-                  //- :dateFilter post.data.date
 
     include /partials/blog-footer.pug
-      
