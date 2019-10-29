@@ -1,7 +1,7 @@
 doctype html
 html(lang='en')
   head
-    title THE BLOG
+    title= config.blogTitle
     link(rel="stylesheet", href="/assets/css/main.css")
 
   body
@@ -9,14 +9,21 @@ html(lang='en')
 
     main
 
-      h1.bla.container This is my blog
+      div.banner
+        div.banner-container.container
+          h1.banner-title= config.blogTitle
+          p.banner-text 
+            span= config.blogTagline
 
-      ul.container
-        each post, index in collections.post
-          if index < config.postListLimit
-            li
-              a(href="posts/" + post.data.slug)= post.data.title
-              div= post.data.date
+      div.latestPosts.container
+        h2.latestPosts-title Latest Posts
+        ul.latestPosts-list
+          each post, index in collections.post
+            if index < config.postListLimit
+              li.latestPosts-item 
+                a(href="posts/" + post.data.slug).latestPosts-itemText= post.data.title
+                div.latestPosts-itemDate= post.data.date
+                  //- :dateFilter post.data.date
 
     include /partials/blog-footer.pug
       

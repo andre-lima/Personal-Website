@@ -1,3 +1,16 @@
-.bla {
-  color: red;
+.latestPosts {
+  &-title {
+    margin-bottom: $space-sm;
+  }
+
+  &-item {
+    margin-bottom: $space-sm;
+  }
+  &-itemText {
+    font-size: $text-lg;
+  }
+
+  &-itemDate {
+    font-size: $text-sm;
+  }
 }

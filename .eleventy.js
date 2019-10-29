@@ -1,3 +1,13 @@
-module.exports = function(eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("src/assets");
+// Import filters
+const dateFilter = require("./src/filters/date-filter.js");
+
+module.exports = function(config) {
+  // Filters
+  config.setPugOptions({
+    filters: {
+      dateFilter: dateFilter
+    }
+  });
+
+  config.addPassthroughCopy("src/assets");
 };

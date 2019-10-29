@@ -139,8 +139,17 @@ body {
 main {
   flex-grow: 1; }
 
-.bla {
-  color: red; }
+.latestPosts-title {
+  margin-bottom: 0.75em; }
+
+.latestPosts-item {
+  margin-bottom: 0.75em; }
+
+.latestPosts-itemText {
+  font-size: 1.25em; }
+
+.latestPosts-itemDate {
+  font-size: 0.8em; }
 
 .postTitle {
   background-image: url("https://loremflickr.com/1024/300");
