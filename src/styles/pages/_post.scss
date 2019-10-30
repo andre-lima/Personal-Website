@@ -25,3 +25,10 @@
 .postContent-container {
   @include basic-container();
 }
+
+.post {
+  font-size: $text-sm;
+  p {
+    margin-bottom: $space-md;
+  }
+}

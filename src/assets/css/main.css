@@ -176,3 +176,8 @@ main {
   max-width: 1024px;
   width: 100%;
   margin: 0 auto; }
+
+.post {
+  font-size: 0.8em; }
+  .post p {
+    margin-bottom: 1em; }

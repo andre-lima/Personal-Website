@@ -5,12 +5,15 @@ html(lang='en')
   head
     title= title
     link(rel="stylesheet", href="/assets/css/main.css")
+    link(rel="stylesheet", href="/vendors/prism.css")
 
   body
     include /partials/blog-header.pug
 
     main
       +post-title(title, date)
-      div.postContent-container.container !{content}
+      div.postContent-container.post.container !{content}
 
     include /partials/blog-footer.pug
+
+    script(src="/vendors/prism.js")
