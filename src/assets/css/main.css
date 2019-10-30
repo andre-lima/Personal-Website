@@ -162,8 +162,7 @@ main {
     margin: 0 auto; }
   .postTitle-text {
     background-color: rgba(255, 255, 255, 0.75);
-    padding: 0.125rem;
-    display: inline-block; }
+    padding: 0.125rem; }
 
 .postDate {
   background-color: rgba(255, 255, 255, 0.75);
