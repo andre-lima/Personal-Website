@@ -39,7 +39,7 @@ html {
   font-family: sans-serif; }
   @media only screen and (min-width: 480px) {
     html {
-      font-size: 1.25em; } }
+      font-size: 1.2em; } }
 
 body {
   font-size: inherit;
@@ -173,11 +173,30 @@ main {
 
 .postContent-container {
   padding: 1.25em;
-  max-width: 1024px;
+  max-width: 700px;
   width: 100%;
   margin: 0 auto; }
 
 .post {
-  font-size: 0.8em; }
+  font-family: "Noto Serif TC", serif;
+  font-size: 1em; }
   .post p {
-    margin-bottom: 1em; }
+    margin-bottom: 2em; }
+    .post p:first-child:first-letter {
+      font-size: 1.95312em; }
+  .post pre + p {
+    margin-top: -0.5em;
+    font-size: 0.75em;
+    color: gray; }
+  .post h2,
+  .post h3,
+  .post h4,
+  .post h5,
+  .post h6 {
+    margin-bottom: 0.25em;
+    font-family: sans-serif; }
+  .post blockquote {
+    background-color: lightblue;
+    padding: 0.5em; }
+    .post blockquote p {
+      margin-bottom: 1em; }

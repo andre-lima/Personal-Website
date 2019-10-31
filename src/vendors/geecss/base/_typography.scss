@@ -1,5 +1,5 @@
 $text-base-size-mobile: 1em;
-$text-base-size: 1.25em;
+$text-base-size: 1.2em;
 $text-scale-ratio: 1.25;
 
 $font-primary: sans-serif;
@@ -48,9 +48,7 @@ html {
 
   @include mq(phone) {
     font-size: $text-base-size;
-
   }
-
 }
 
 // html {
