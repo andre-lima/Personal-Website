@@ -42,9 +42,11 @@ And that's when I found the comment by user _jslegers_ on that thread saying tha
 
 _Importing things dynamically in LESS_
 
+> By the way... did you know that even though Sass is perceived by most as being more popular, it actually has fewer stars on Github? 🤯
+
 After some tests, I confirmed that the dynamic imports of Less worked perfectly for me, and I even learned some very interesting things about the differences about Sass and Less.
 
-## What about optional imports
+## What about optional imports?
 
 Come on Sass! I'd really hope to be able to import things that I don't know yet if they'll exist.
 
@@ -57,22 +59,64 @@ This proved important on my Angular application. Since the styles in Angular com
 
 _Won't halt compilation if the file does not exists_
 
-## The differences
+## Variable overrides
 
 The following article was written by one of the maintainer of the Less repositories, and he goes into a lot of detail into how both pre-processors differ.
-
-> By the way... did you know that even though Sass is perceived by most as being more popular, it actually has fewer stars on Github? 🤯
 
 Definitely a must-read even if you're happy with your current choice.
 
 [Less: The World’s Most Misunderstood
 CSS Pre-processor](https://getcrunch.co/2015/10/08/less-the-worlds-most-misunderstood-css-pre-processor/)
 
-## The worst part
+The article mentions that due to the **declarative vs imperative** nature of both languages the variable declaration order matters in _Sass_ but not in _Less_. At first I thought this wasn't a very big deal, until (on another more mature project) I tried to override some variables from a _theme_ file and it didn't work.
 
-Although _Less_ lacks some features (that I honestly don't even miss that much) from other options, the worst part for me was adapting to the new syntax.
+> "Why isn't this variable value changing?"
+
+I asked myself...
+
+See if you can spot the mistake.
+
+```scss
+// _generic.scss
+$primary-color: #b4da55;
+$main-text-color: $primary-color;
+
+// _theme.scss
+$primary-color: #f1e57a;
+
+// main.scss
+@import "generic";
+@import "client_1/theme";
+@import "components/header";
+
+// _header.scss
+.headerTitle {
+  color: $main-text-color; // ???????
+}
+```
+
+_What color will the header title be in the end?_
+
+Since _Sass_ evaluates variables imperatively, _\$main-text-color_ will have the value **#b4da55**. If you wanted to change that variable to take the new _\$primary-color_ value, you'd need to override this and **all other variables** that had the primary value assigned to it in the \__generic.scss_ in the \__theme.scss_ as well.
+
+Luckily _Less_ ( 😍 ) doesn't have this problem, and even if this wouldn't be an issue on your _Sass_ projects, it's always good to keep in mind how it works.
+
+## The bad part
+
+Although _Less_ lacks some features (that I honestly don't even miss that much) present in other frameworks, the worst part for me was adapting to the new syntax.
 
 After a while I ended up enjoying it, although **Prettier** does not format its _mixins_ correctly, **and this is still driving me nuts!**
+
+```less
+.mq(
+  desktop-only,
+  {@carousel-arrows-spacing: @space-xs ; background-color: red; font-size:
+    111px;},
+  other_param
+);
+```
+
+_Media query mixin 👺: Not so much "prettier", is it?_
 
 ## Use what suits your project better
 

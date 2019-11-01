@@ -23,7 +23,7 @@
 }
 
 .postContent-container {
-  @include basic-container($max-width: 700px);
+  @include basic-container($max-width: 750px);
 }
 
 .post {
@@ -31,7 +31,7 @@
   font-size: $text-md;
 
   p {
-    margin-bottom: $space-xl;
+    margin-bottom: $space-lg;
 
     &:first-child {
       &:first-letter {
@@ -57,10 +57,18 @@
 
   blockquote {
     background-color: lightblue;
-    padding: $space-xs;
+    padding: $space-md;
+    font-size: $text-lg;
+    border-radius: 5px;
 
     p {
-      margin-bottom: $space-md;
+      margin-bottom: 0;
+
+      &:first-child {
+        &:first-letter {
+          font-size: $text-md;
+        }
+      }
     }
   }
 }
