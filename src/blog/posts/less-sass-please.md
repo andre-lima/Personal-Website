@@ -65,8 +65,7 @@ The following article was written by one of the maintainer of the Less repositor
 
 Definitely a must-read even if you're happy with your current choice.
 
-[Less: The World’s Most Misunderstood
-CSS Pre-processor](https://getcrunch.co/2015/10/08/less-the-worlds-most-misunderstood-css-pre-processor/)
+<a href="https://getcrunch.co/2015/10/08/less-the-worlds-most-misunderstood-css-pre-processor/" target="_blank">Less: The World’s Most Misunderstood CSS Pre-processor</a>
 
 The article mentions that due to the **declarative vs imperative** nature of both languages the variable declaration order matters in _Sass_ but not in _Less_. At first I thought this wasn't a very big deal, until (on another more mature project) I tried to override some variables from a _theme_ file and it didn't work.
 
@@ -105,7 +104,7 @@ Luckily _Less_ ( 😍 ) doesn't have this problem, and even if this wouldn't be 
 
 Although _Less_ lacks some features (that I honestly don't even miss that much) present in other frameworks, the worst part for me was adapting to the new syntax.
 
-After a while I ended up enjoying it, although **Prettier** does not format its _mixins_ correctly, **and this is still driving me nuts!**
+After a while I ended up enjoying it, although <a href="https://prettier.io/" target="_blank">**Prettier**</a> does not format its _mixins_ correctly, **and this is still driving me nuts!**
 
 ```less
 .mq(
