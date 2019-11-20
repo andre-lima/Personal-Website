@@ -1,11 +1,17 @@
 @mixin white-container {
   margin: 0.5em;
   padding: 1em;
-  background-color: rgba(255,255,255,0.7);
-  box-shadow: 0px 1px 5px rgba(0,0,0,0.1), 0px 1px 5px rgba(0,0,0,0.2);
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1), 0px 1px 5px rgba(0, 0, 0, 0.2);
 }
 
-@mixin flex($jc: null, $ai: null, $wrap: wrap, $direction: null, $child-grow: null) {
+@mixin flex(
+  $jc: null,
+  $ai: null,
+  $wrap: wrap,
+  $direction: null,
+  $child-grow: null
+) {
   display: flex;
   flex-wrap: $wrap;
   justify-content: $jc;
@@ -15,7 +21,6 @@
   & > * {
     flex-grow: $child-grow;
   }
-
 }
 
 .mainContent {
@@ -54,15 +59,19 @@
   a {
     font-size: 0.8em;
   }
-  
+
   a + a {
     margin-left: 2em;
+  }
+
+  strong {
+    font-weight: bold;
   }
 }
 
 .descriptionContainer {
   @include white-container;
-  
+
   & > p + p {
     margin-top: 0.8em;
   }
@@ -71,6 +80,12 @@
 .skillsContainer {
   @include white-container;
   flex-basis: 500px;
+}
+
+.freelanceContainer {
+  @include white-container;
+  flex-basis: 200px;
+  font-weight: bold;
 }
 
 .experience {
