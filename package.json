@@ -19,7 +19,7 @@
   "homepage": "https://github.com/andre-lima/Personal-Website#readme",
   "devDependencies": {
     "cssnano": "^4.1.10",
-    "parcel": "^1.10.3",
+    "parcel": "^2.8.2",
     "sass": "^1.23.7"
   }
 }
